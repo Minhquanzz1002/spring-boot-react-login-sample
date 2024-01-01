@@ -1,0 +1,29 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 867613105139-v7shr6f64v80e2ojoshtvmh4p1997uba.apps.googleusercontent.com
+            client-secret: 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
+            client-name: Google
+            scope:
+              - email
+              - profile
+          github:
+            client-id: 76a1b18309f69d60e303
+            client-secret: 0c4412c94f0a07e0f6f623e85b438bb7e97851d4
+            client-name: Github
+            scope:
+              - user:email
+              - read:user
+
+
+app:
+  auth:
+    tokenSecret: 404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970
+    refreshTokenExpirationMsec: 604800000
+    accessTokenExpirationMsec: 864000000
+  oAuth2:
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
